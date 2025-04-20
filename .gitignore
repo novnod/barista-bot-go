@@ -33,5 +33,8 @@ Thumbs.db
 # Log files
 *.log
 
+# Env files
+.env
+
 # Misc
 testdata/*.png
