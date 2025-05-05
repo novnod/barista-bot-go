@@ -128,17 +128,17 @@ func TestLoadHardGoProblems(t *testing.T) {
 	}
 }
 
-// TestDumpExampleImage writes a sample GoProblem image to 'testdata/example.png' for manual inspection
+// TestDumpExampleImage writes a sample GoProblem image to 'tests/example.png' for manual inspection
 func TestDumpExampleImage(t *testing.T) {
 	prob := &GoProblem{
 		Name:  "ExampleProblem",
 		Black: []string{"dd", "ee"},
 		White: []string{"cc", "ff"},
 	}
-	outDir := filepath.Join("testdata")
+	outDir := filepath.Join("tests")
 	// ensure directory exists
 	if err := os.MkdirAll(outDir, 0755); err != nil {
-		t.Fatalf("failed to create testdata dir: %v", err)
+		t.Fatalf("failed to create tests dir: %v", err)
 	}
 	imgPath, err := RenderProblem(prob, outDir, 300, 30)
 	if err != nil {

@@ -12,6 +12,7 @@ coverage.out
 
 # Output images directory
 /out/
+/parser/tests/
 
 # SGF files
 /files/*.sgf
@@ -38,3 +39,4 @@ Thumbs.db
 
 # Misc
 testdata/*.png
+bot.db

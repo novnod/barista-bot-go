@@ -8,7 +8,8 @@ import (
 )
 
 type Config struct {
-	BotToken string
+	BotToken    string
+	DatabaseUrl string
 }
 
 func LoadConfig() (*Config, error) {
@@ -17,7 +18,8 @@ func LoadConfig() (*Config, error) {
 	}
 
 	config := &Config{
-		BotToken: getEnv("DISCORD_TOKEN", ""),
+		BotToken:    getEnv("DISCORD_TOKEN", ""),
+		DatabaseUrl: getEnv("DATABASE_URL", ""),
 	}
 	return config, nil
 }
